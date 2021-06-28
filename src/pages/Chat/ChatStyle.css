@@ -1,0 +1,66 @@
+.content {
+  width: 650px;
+  height: 700px;
+  padding: 5px;
+  background-color: #edffff;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.content .messages {
+  height: 500px;
+  overflow: auto;
+}
+.content .messages .message {
+  margin: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+}
+.content .messages .message .user-name {
+  font-weight: 500;
+  color: #23237c;
+}
+.content .messages .message .text {
+  font-weight: 400;
+  padding: 5px 0;
+}
+.content .messages .message .create-time {
+  font-weight: 300;
+  font-size: 13px;
+}
+.content .create {
+  margin: 15px;
+}
+.content .create .user-name {
+  resize: none;
+  padding: 5px;
+  width: 610px;
+  height: 20px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+.content .create .input-message {
+  resize: none;
+  padding: 5px;
+  height: 70px;
+  width: 610px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+.content .create .button {
+  background-color: #3333b3;
+  color: #ffffff;
+  height: 20px;
+  width: 80px;
+  padding: 9px 6px 10px 9px;
+  border-radius: 20px;
+  margin: 5px 0 0 520px;
+  transition: background 0.1s linear;
+  cursor: pointer;
+}
+.content .create .button :hover {
+  background-color: #4d4dcc;
+}
+.content .create .button :active {
+  background-color: #6161d2;
+}
