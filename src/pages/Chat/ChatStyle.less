@@ -1,0 +1,80 @@
+@btnColor: #3333b3;
+
+
+
+.content {
+  width: 650px;
+  height: 700px;
+  padding: 5px;
+  background-color: #edffff;
+  border-radius: 5px;
+  font-size: 15px;
+
+  & .messages {
+    height: 500px;
+    overflow: auto;
+
+    & .message {
+      margin: 10px 15px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 5px;
+
+      & .user-name {
+        font-weight: 500;
+        color: #23237c;
+      }
+
+      & .text {
+        font-weight: 400;
+        padding: 5px 0;
+      }
+
+      & .create-time {
+        font-weight: 300;
+        font-size: 13px;
+      }
+    }
+  }
+
+  & .create {
+    margin: 15px;
+
+    & .user-name {
+      resize: none;
+      padding: 5px;
+      width: 610px;
+      height: 20px;
+      border-radius: 6px;
+      margin-top: 5px;
+    }
+
+    & .input-message {
+      resize: none;
+      padding: 5px;
+      height: 70px;
+      width: 610px;
+      border-radius: 6px;
+      margin-top: 5px;
+
+    }
+
+    & .button {
+      background-color: @btnColor;
+      color: #ffffff;
+      height: 20px;
+      width: 80px;
+      padding: 9px 6px 10px 9px;
+      border-radius: 20px;
+      margin: 5px 0 0 520px;
+      transition: background .1s linear;
+      cursor: pointer;
+      & :hover {
+        background-color: lighten(@btnColor, 10%);
+      }
+      & :active {
+        background-color: lighten(@btnColor, 15%);
+      }
+    }
+  }
+}
