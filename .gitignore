@@ -6,9 +6,6 @@
 .pnp.js
 .idea
 
-# css preprocessing
-src/**/*.css
-src/**/*.map
 
 # testing
 /coverage
