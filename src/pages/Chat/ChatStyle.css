@@ -22,11 +22,7 @@
 }
 .content .messages .message .text {
   font-weight: 400;
-  padding: 5px 0;
-}
-.content .messages .message .create-time {
-  font-weight: 300;
-  font-size: 13px;
+  padding: 5px 5px;
 }
 .content .create {
   margin: 15px;

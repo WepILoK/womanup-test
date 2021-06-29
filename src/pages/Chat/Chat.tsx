@@ -16,18 +16,34 @@ export const Chat: React.FC = () => {
         firestore.collection('messages').orderBy('createdAt')
     )
 
-    const handleChangeTextarea = (event: React.FormEvent<HTMLTextAreaElement>, type: string) => {
-        const value = event.currentTarget.value
+    /**
+     *
+     * @param {string} text Текст из textarea
+     * @param {string} type Вид textarea
+     * Определяет указанную зону ввода и добавляет текст в стейт
+     */
+
+    const handleChangeTextarea = (text: string, type: string): void => {
         if ('user-name' === type) {
-            setUserName(value)
+            setUserName(text)
         } else if ('input-message' === type) {
-            setMessage(value)
+            setMessage(text)
         }
     }
+
+    /**
+     * Автоматический скролл вниз списка сообщений
+     */
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({behavior: "smooth"})
     }
+
+    /**
+     * Функция, которая определяет не пустые ли поля.
+     * Затем в случае если все подходит под условия,
+     * идет оправка сообщений на сервер и зачищается стейт сообщения
+     */
 
     const sendMessage = async () => {
         if (userName !== '' && message !== '') {
@@ -45,6 +61,7 @@ export const Chat: React.FC = () => {
     if (!messages) {
         return null
     }
+
     return (
         <div className='content'>
             <div className='messages'>
@@ -58,12 +75,12 @@ export const Chat: React.FC = () => {
                 <textarea className='user-name'
                           placeholder='Имя пользователя'
                           value={userName}
-                          onChange={event => handleChangeTextarea(event, 'user-name')}
+                          onChange={e => handleChangeTextarea(e.currentTarget.value, 'user-name')}
                 />
                 <textarea className='input-message'
                           placeholder='Сообщение'
                           value={message}
-                          onChange={event => handleChangeTextarea(event, 'input-message')}
+                          onChange={e => handleChangeTextarea(e.currentTarget.value, 'input-message')}
                 />
                 <div className='button'
                      onClick={sendMessage}>
