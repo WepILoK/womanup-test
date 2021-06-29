@@ -1,9 +1,12 @@
 import React, {createContext} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import firebase from "firebase";
 import 'firebase/firestore'
+import firebase from "firebase";
+
+import App from './App';
+
+import './index.css';
+
 
 firebase.initializeApp({
     apiKey: "AIzaSyAuXYn0YibaHVzKxqqFZiQhnA9yDxK6s18",
@@ -15,13 +18,12 @@ firebase.initializeApp({
     measurementId: "G-TW9C78PHSW"
 });
 
+export const Context = createContext<any>(null)
 const firestore = firebase.firestore()
-export const Context = createContext<any>({})
 
 ReactDOM.render(
     <React.StrictMode>
         <Context.Provider value={{
-            firebase,
             firestore
         }}>
             <App/>

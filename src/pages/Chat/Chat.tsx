@@ -1,9 +1,11 @@
 import React, {useContext, useEffect, useRef, useState} from 'react'
-import './ChatStyle.css'
-import {Message} from "./components/Message";
-import {Context} from "../../index";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import firebase from "firebase";
+
+import {Message} from "./components/Message";
+import {Context} from "../../index";
+import './ChatStyle.css'
+
 
 export const Chat: React.FC = () => {
     const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -46,9 +48,9 @@ export const Chat: React.FC = () => {
     return (
         <div className='content'>
             <div className='messages'>
-                {messages.map(item => (
-                    <Message key={item.id} name={item.name}
-                             text={item.text} createdAt={item.createdAt}/>
+                {messages.map((item, index) => (
+                    <Message key={index} name={item.name}
+                             text={item.text}/>
                 ))}
                 <div ref={messagesEndRef}/>
             </div>
