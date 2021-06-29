@@ -38,7 +38,8 @@ export const Chat: React.FC = () => {
         }
     }
 
-    useEffect(scrollToBottom, []);
+    useEffect(scrollToBottom, [messages]);
+
     if (!messages) {
         return null
     }
@@ -46,9 +47,8 @@ export const Chat: React.FC = () => {
         <div className='content'>
             <div className='messages'>
                 {messages.map(item => (
-                    <div key={item.id}>
-                        <Message name={item.name} text={item.text} createdAt={item.createdAt}/>
-                    </div>
+                    <Message key={item.id} name={item.name}
+                             text={item.text} createdAt={item.createdAt}/>
                 ))}
                 <div ref={messagesEndRef}/>
             </div>

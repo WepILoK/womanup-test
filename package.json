@@ -21,14 +21,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "npm run build-css && run-p -ncr watch-css start-js",
-    "start-js": "react-scripts start",
-    "build": "run-s -n build-css build-js",
-    "build-js": "react-scripts build",
-    "test": "run-s -n build-css test-js",
-    "test-js": "react-scripts test --env=jsdom",
-    "build-css": "node-less-chokidar src",
-    "watch-css": "node-less-chokidar src --watch",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
