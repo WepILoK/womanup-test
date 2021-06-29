@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/womanup-test/static/css/main.c631ec8a.chunk.css",
+    "main.js": "/womanup-test/static/js/main.f5b60217.chunk.js",
+    "main.js.map": "/womanup-test/static/js/main.f5b60217.chunk.js.map",
+    "runtime-main.js": "/womanup-test/static/js/runtime-main.c84804bb.js",
+    "runtime-main.js.map": "/womanup-test/static/js/runtime-main.c84804bb.js.map",
+    "static/js/2.ed857cd3.chunk.js": "/womanup-test/static/js/2.ed857cd3.chunk.js",
+    "static/js/2.ed857cd3.chunk.js.map": "/womanup-test/static/js/2.ed857cd3.chunk.js.map",
+    "index.html": "/womanup-test/index.html",
+    "static/css/main.c631ec8a.chunk.css.map": "/womanup-test/static/css/main.c631ec8a.chunk.css.map",
+    "static/js/2.ed857cd3.chunk.js.LICENSE.txt": "/womanup-test/static/js/2.ed857cd3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c84804bb.js",
+    "static/js/2.ed857cd3.chunk.js",
+    "static/css/main.c631ec8a.chunk.css",
+    "static/js/main.f5b60217.chunk.js"
+  ]
+}
