@@ -54,9 +54,11 @@
   transition: background 0.1s linear;
   cursor: pointer;
 }
-.content .create .button :hover {
+.content .create .button:hover {
   background-color: #4d4dcc;
 }
-.content .create .button :active {
+.content .create .button:active {
   background-color: #6161d2;
+  padding: 10px;
 }
+/*# sourceMappingURL=ChatStyle.css.map */
