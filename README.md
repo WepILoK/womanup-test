@@ -1,3 +1,3 @@
 # Тестовое
 
-Ссылка на развернутую версию [Create React App](https://wepilok.github.io/womanup-test/)
+Ссылка на развернутую версию [тут](https://wepilok.github.io/womanup-test/)
